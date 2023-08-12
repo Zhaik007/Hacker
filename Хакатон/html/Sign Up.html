@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register page</title>
+    <link rel="stylesheet" href="stils.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="main">
+        <section class="aut">
+            <div class="container">
+                <div class="aut-wrapper">
+                    <div class="aut-info">
+                        
+                        
+                        <h1 class="aut-sign">Sign up</h1>
+                        <div class="aut-wit">
+                            <hr class="hr"> 
+                            <p class="wit">With</p>
+                        </div>
+                        <div class="aut-btns">
+                            <button>
+                                <img src="/img/google.png" alt="">
+                                <span>Sign up with Google</span></button>
+                            <button>
+                                <img src="/img/facebook.png" alt="">
+                                <span>Sign up with Facebook</span></button>
+                        </div>
+                        <form action="" class="aut-form">
+                            <input type="email" name="email" id="email" placeholder="E-mail" class="tols">
+                            <div class="forms-inp">
+                                <input type="text" name="name" id="name" placeholder="Name">
+                                <div class="dropdown">
+                                    <button id="cdrop" class="hovcard rounded-lg" type="button" >
+                                        <img class="rounded inline-block align-middle" src="https://flagsapi.com/KZ/flat/64.png" alt="" width="30 " height="30">
+                                        <i class="fa-solid fa-sort-down" style="color:#939CC0"></i>
+                                    </button>
+                                    <ul class="hovcard dropdownoptions absolute rounded-lg focus:ring" id="contries">
+                                        
+                                    </ul>
+                                    <input type="text" name="country" id="country" value="Kazakhstan" class="invalid">
+
+                                </div>
+                            </div>
+                            <input type="password" placeholder="Password" name="password"  id="password" class="tols">
+                            <div class="forms-inp">
+                                <input type="checkbox" name="checker" id="checker" class="checker" >
+                                <p><b>I've read and agree with <u></u><a href="#" class="ss">Terms of Service</a></u></b></p>
+                            </div>
+                            <input type="submit" class="submit" value="SIGN UP" name="submit">
+                            <div class="pp"><b>Already have an account? <button id="signin"><a href="Sign IN.html" class="ss"> Sign in</a></button></b> </div>
+                        </form>
+                    </div>
+                    <div class="aut-img">
+                        <img src="/img/autt.png" alt="" >
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        
+        var country = document.getElementsByName("country")[0]; // input
+        var cdrop = document.querySelector("#cdrop");  // button to select
+         
+        function update_country(el){
+            country.value = el.innerText;
+            cdrop.innerHTML = el.innerHTML;   
+            cdrop.style.backgroundColor='#EAEEFF';
+            cdrop.querySelector('#pp').remove()
+            cdrop.innerHTML+= `<i class="fa-solid fa-sort-down" style="color:#939CC0"></i>
+`
+ } 
+    </script>
+    <script src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/09e0948662.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+<!-- How do you add text to the end of every line in Visual Studio code?
+Windows: Ctrl + A to select all lines. Alt/Option + Shift + I to insert cursor at the end of every line. -->
+<!-- ctrl alt arrow -->
